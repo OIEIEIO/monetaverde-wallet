@@ -34,7 +34,7 @@ namespace WalletGui {
 namespace {
 
 const char BLOG_RSS_SCHEME[] = "https";
-const char BLOG_RSS_HOST[] = "forum.getmonetaverde.org";
+const char BLOG_RSS_HOST[] = "mcn.green";
 const char BLOG_RSS_PATH[] = "/forum/26-announcements.xml/";
 //const char BLOG_RSS_PATH[] = "/feed/atom/";
 /*
@@ -134,8 +134,8 @@ void BlogReader::init() {
   if (m_networkManager == nullptr) {
     WalletLogger::info(tr("[Blog reader] Initializing"));
     m_networkManager = new QNetworkAccessManager(this);
-    getBlogRequest();
-    m_updateTimerId = startTimer(UPDATE_TIMER_INTERVAL);
+    //getBlogRequest();
+    //m_updateTimerId = startTimer(UPDATE_TIMER_INTERVAL);
   }
 }
 
@@ -174,7 +174,7 @@ void BlogReader::removeObserver(INewsReaderObserver* _observer) {
 
 void BlogReader::timerEvent(QTimerEvent* _event) {
   if (_event->timerId() == m_updateTimerId) {
-    getBlogRequest();
+    // getBlogRequest();
     return;
   }
 

@@ -60,8 +60,8 @@ namespace WalletGui {
 namespace {
 
 const int MAX_RECENT_WALLET_COUNT = 10;
-const char COMMUNITY_FORUM_URL[] = "https://forum.getmonetaverde.org";
-const char REPORT_ISSUE_URL[] = "https://github.com/campurro/monetaverde-wallet/issues";
+const char COMMUNITY_FORUM_URL[] = "https://mcn.green";
+const char REPORT_ISSUE_URL[] = "https://github.com/mcnproject/monetaverde-wallet/issues";
 
 const char DONATION_URL_DONATION_TAG[] = "donation";
 const char DONATION_URL_LABEL_TAG[] = "label";
@@ -134,7 +134,7 @@ MainWindow::MainWindow(ICryptoNoteAdapter* _cryptoNoteAdapter, IAddressBookManag
     uiItem->setDonationManager(m_donationManager);
     uiItem->setMiningManager(m_miningManager);
     uiItem->setApplicationEventHandler(m_applicationEventHandler);
-    uiItem->setBlogReader(m_blogReader);
+    // uiItem->setBlogReader(m_blogReader);
     uiItem->setMainWindow(this);
     uiItem->setNodeStateModel(m_nodeStateModel);
     uiItem->setWalletStateModel(m_walletStateModel);
